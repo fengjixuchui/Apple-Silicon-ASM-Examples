@@ -6,7 +6,8 @@
 // Logical Shift Left (LSL)
 // Each shift left = number x 2
 //
-// RUN --> ./filename ; echo $?
+// COMPILE  -->  make
+// RUN      -->  ./filename ; echo $?
 // ------------------------------------------------
 
 
@@ -15,10 +16,10 @@
 
 
 _start:
-	mov	X1, 15					// 15 in binary is 1111
-	lsl	X0, X1, 1				// Shift X1 left by 1 and store in X0
+	MOV	X1, 15					// 15 in binary is 1111
+	LSL	X0, X1, 1				// Shift X1 left by 1 and store in X0
 								// Answer should be 15 x 2 = 30
 
 end:
-	mov	X16, 1					// System call to terminate this program
-	svc	0						// Call kernel to perform the action
+	MOV	X16, 1					// System call to terminate this program
+	SVC	0						// Call kernel to perform the action

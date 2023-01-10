@@ -5,7 +5,8 @@
 // ------------------------------------------------
 // Add two values
 //
-// RUN --> ./filename ; echo $?
+// COMPILE  -->  make
+// RUN      -->  ./filename ; echo $?
 // ------------------------------------------------
 
 
@@ -14,7 +15,7 @@
 
 
 _start:
-	mov	X0, #7
-	add	X0, X0, #13
-	mov	X16, #1
-	svc	0
+	MOV	X0, #7
+	ADD	X0, X0, #13
+	MOV	X16, #1
+	SVC	0
